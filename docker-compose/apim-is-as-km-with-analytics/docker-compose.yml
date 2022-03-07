@@ -66,3 +66,24 @@ services:
       - "9443:9443"
       - "8280:8280"
       - "8243:8243"
+  tm1:
+    build: ./dockerfiles/apim
+    healthcheck:
+      test: ["CMD", "nc", "-z","localhost", "9443"]
+      interval: 10s
+        tart_period: 180s
+      retries: 20
+    depends_on:
+      mysql:
+        condition: service_healthy
+      is-as-km:
+        condition: service_healthy
+    volumes:
+      - ./conf/tm:/home/wso2carbon/wso2-config-volume
+    ports:
+      - "9453:9443"
+      - "8290:8280"
+      - "8254:8243"
+      - "5682:5672"
+      - "9621:9611"
+      - "9721:9711"
