@@ -69,7 +69,7 @@ services:
   tm1:
     build: ./dockerfiles/apim
     healthcheck:
-      test: ["CMD", "nc", "-z","localhost", "9443"]
+      test: ["CMD", "nc", "-z","localhost", "5672"]
       interval: 10s
       start_period: 180s
       retries: 20
