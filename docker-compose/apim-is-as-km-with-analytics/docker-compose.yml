@@ -138,6 +138,56 @@ services:
       - "5683:5672"
       - "9622:9611"
       - "9722:9711"
+  gw1:
+    build: ./dockerfiles/gw
+    networks:
+      - nginx_network
+    environment:
+      PROFILE_NAME: gateway-worker
+    healthcheck:
+      test: ["CMD", "nc", "-z","localhost", "9443"]
+      interval: 10s
+      start_period: 180s
+      retries: 20
+    depends_on:
+      mysql:
+        condition: service_healthy
+      is-as-km:
+        condition: service_healthy
+    volumes:
+      - ./conf/gw:/home/wso2carbon/wso2-config-volume
+    ports:
+      - "9448:9443"
+      - "8285:8280"
+      - "8248:8243"
+      - "5677:5672"
+      - "9616:9611"
+      - "9716:9711"
+  gw2:
+    build: ./dockerfiles/gw
+    networks:
+      - nginx_network
+    environment:
+      PROFILE_NAME: gateway-worker
+    healthcheck:
+      test: ["CMD", "nc", "-z","localhost", "9443"]
+      interval: 10s
+      start_period: 180s
+      retries: 20
+    depends_on:
+      mysql:
+        condition: service_healthy
+      is-as-km:
+        condition: service_healthy
+    volumes:
+      - ./conf/gw:/home/wso2carbon/wso2-config-volume
+    ports:
+      - "9448:9443"
+      - "8286:8280"
+      - "8249:8243"
+      - "5678:5672"
+      - "9617:9611"
+      - "9717:9711"
   ngix-lb:
     build: ./dockerfiles/nginx
     networks:
@@ -145,6 +195,8 @@ services:
     ports:
       - 80:80
       - 443:443
+      - 3000:3000
+      - 4000:4000
     volumes:
       - ./conf/tm:/home/wso2carbon/wso2-config-volume
     depends_on:
