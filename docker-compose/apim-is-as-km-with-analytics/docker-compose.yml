@@ -182,7 +182,7 @@ services:
     volumes:
       - ./conf/gw:/home/wso2carbon/wso2-config-volume
     ports:
-      - "9448:9443"
+      - "9449:9443"
       - "8286:8280"
       - "8249:8243"
       - "5678:5672"
