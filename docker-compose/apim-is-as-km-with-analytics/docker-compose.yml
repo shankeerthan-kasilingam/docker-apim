@@ -126,3 +126,8 @@ services:
       - "5683:5672"
       - "9622:9611"
       - "9722:9711"
+  ngix-lb:
+    build: ./dockerfiles/nginx
+    ports:
+      - 80:80
+      - 443:443
