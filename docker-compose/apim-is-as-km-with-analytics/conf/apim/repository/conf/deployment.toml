@@ -98,7 +98,7 @@ gateway_labels =["Default"]
 [apim.analytics]
 enable = true
 config_endpoint = "https://analytics-event-auth.choreo.dev/auth/v1"
-auth_token = "<on-prem-key>"
+auth_token = "sfsflsf_fakekey"
 
 [apim.key_manager]
 service_url = "https://is-as-km:${mgt.transport.https.port}/services/"
