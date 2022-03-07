@@ -132,7 +132,9 @@ services:
     depends_on:
       mysql:
         condition: service_healthy
-      is-as-km:
+      is-as-km1:
+        condition: service_healthy
+      is-as-km2:
         condition: service_healthy
     volumes:
       - ./conf/gw:/home/wso2carbon/wso2-config-volume
@@ -156,7 +158,9 @@ services:
     depends_on:
       mysql:
         condition: service_healthy
-      is-as-km:
+      is-as-km1:
+        condition: service_healthy
+      is-as-km2:
         condition: service_healthy
     volumes:
       - ./conf/gw:/home/wso2carbon/wso2-config-volume
@@ -180,7 +184,9 @@ services:
     depends_on:
       mysql:
         condition: service_healthy
-      is-as-km:
+      is-as-km1:
+        condition: service_healthy
+      is-as-km2:
         condition: service_healthy
     volumes:
       - ./conf/cpl:/home/wso2carbon/wso2-config-volume
@@ -203,7 +209,9 @@ services:
     depends_on:
       mysql:
         condition: service_healthy
-      is-as-km:
+      is-as-km1:
+        condition: service_healthy
+      is-as-km2:
         condition: service_healthy
     volumes:
       - ./conf/cpl:/home/wso2carbon/wso2-config-volume
