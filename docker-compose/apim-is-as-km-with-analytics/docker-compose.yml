@@ -191,10 +191,10 @@ services:
     volumes:
       - ./conf/cpl:/home/wso2carbon/wso2-config-volume
     ports:
-      - "9448:9443"
-      - "5677:5672"
-      - "9616:9611"
-      - "9716:9711"
+      - "9443:9443"
+      - "5672:5672"
+      - "9611:9611"
+      - "9711:9711"
   cpl2:
     build: ./dockerfiles/cpl
     networks:
@@ -216,10 +216,10 @@ services:
     volumes:
       - ./conf/cpl:/home/wso2carbon/wso2-config-volume
     ports:
-      - "9443:9443"
-      - "5678:5672"
-      - "9617:9611"
-      - "9717:9711"
+      - "9444:9443"
+      - "5673:5672"
+      - "9612:9611"
+      - "9712:9711"
   ngix-lb:
     build: ./dockerfiles/nginx
     networks:
