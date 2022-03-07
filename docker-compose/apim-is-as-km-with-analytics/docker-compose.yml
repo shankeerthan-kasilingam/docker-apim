@@ -197,6 +197,8 @@ services:
       - 443:443
       - 3000:3000
       - 4000:4000
+      - 8000:8000
+      - 8043:8043
     volumes:
       - ./conf/tm:/home/wso2carbon/wso2-config-volume
     depends_on:
