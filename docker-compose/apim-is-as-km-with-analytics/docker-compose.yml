@@ -67,7 +67,7 @@ services:
       - "8280:8280"
       - "8243:8243"
   tm1:
-    build: ./dockerfiles/apim
+    build: ./dockerfiles/tm
     healthcheck:
       test: ["CMD", "nc", "-z","localhost", "5672"]
       interval: 10s
