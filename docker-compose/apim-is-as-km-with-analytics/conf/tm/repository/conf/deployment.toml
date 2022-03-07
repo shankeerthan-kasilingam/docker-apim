@@ -43,9 +43,9 @@ password = "wso2carbon"
 enable = true
 username = "$ref{super_admin.username}"
 password = "$ref{super_admin.password}"
-service_url = "https://api-manager:9443/services/"
-event_listening_endpoints = ["tcp://api-manager:5672"]
+service_url = "https://ngix-lb:443/services/"
+event_listening_endpoints = ["tcp://cpl1:5672", "tcp://cpl2:5672"]
 
 [[apim.event_hub.publish.url_group]]
-urls = ["tcp://api-manager:9611"]
-auth_urls = ["ssl://api-manager:9711"]
+urls = ["tcp://cpl1:9611", "tcp://cpl2:9611"]
+auth_urls = ["ssl://cpl1:9711", "ssl://cpl2:9711"]

@@ -56,7 +56,7 @@ order = 1
 # todo : change to CPL 
 # https://apim.docs.wso2.com/en/latest/install-and-setup/setup/distributed-deployment/deploying-wso2-api-m-in-a-distributed-setup-with-tm-separated/
 [event_listener.properties]
-notification_endpoint = "https://api-manager:9443/internal/data/v1/notify"
+notification_endpoint = "https://ngix-lb:443/internal/data/v1/notify"
 username = "${admin.username}"
 password = "${admin.password}"
 'header.X-WSO2-KEY-MANAGER' = "default"
@@ -68,13 +68,13 @@ password = "${admin.password}"
 enable = true
 username = "$ref{super_admin.username}"
 password = "$ref{super_admin.password}"
-service_url = "https://api-manager:9443/services/"
-event_listening_endpoints = ["tcp://api-manager:5672"]
+service_url = "https://ngix-lb:443/services/"
+event_listening_endpoints = ["tcp://cpl1:5672", "tcp://cpl2:5672"]
 
 # todo : change to CPL 
 [[apim.event_hub.publish.url_group]]
-urls = ["tcp://api-manager:9611"]
-auth_urls = ["ssl://api-manager:9711"]
+urls = ["tcp://cpl1:9611","tcp://cpl2:9611" ]
+auth_urls = ["ssl://cpl1:9711", "ssl://cpl2:9711"]
 
 [apim.cors]
 allow_origins = "*"
@@ -83,4 +83,4 @@ allow_headers = ["authorization","Access-Control-Allow-Origin","Content-Type","S
 allow_credentials = false
 
 [apim.sync_runtime_artifacts.gateway]
-gateway_labels =["Default"]
+gateway_labels =["GW1" , "GW2"]

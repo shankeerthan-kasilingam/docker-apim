@@ -1,6 +1,6 @@
 [server]
 hostname = "cp.wso2.com"
-node_ip = "127.0.0.1"
+node_ip = "192.168.104.82"
 server_role = "control-plane"
 offset=0
 
@@ -83,7 +83,7 @@ name = "org.wso2.is.notification.ApimOauthEventInterceptor"
 order = 1
 
 [event_listener.properties]
-notification_endpoint = "https://ngix-lb:7000/internal/data/v1/notify"
+notification_endpoint = "https://ngix-lb:443/internal/data/v1/notify"
 username = "${admin.username}"
 password = "${admin.password}"
 'header.X-WSO2-KEY-MANAGER' = "default"
@@ -93,12 +93,12 @@ password = "${admin.password}"
 enable = true
 username = "$ref{super_admin.username}"
 password = "$ref{super_admin.password}"
-service_url = "https://ngix-lb:7000/services/"
-event_listening_endpoints = ["tcp://cp1:5672", "tcp://cp2:5672"]
+service_url = "https://ngix-lb:443/services/"
+event_listening_endpoints = ["tcp://cpl1:5672", "tcp://cpl2:5672"]
 
 [[apim.event_hub.publish.url_group]]
-urls = ["tcp://cp1:9611", "tcp://cp2:9611"]
-auth_urls = ["ssl://cp1:9711", "ssl://cp2:9711"]
+urls = ["tcp://cpl1:9611", "tcp://cpl2:9611"]
+auth_urls = ["ssl://cpl1:9711", "ssl://cpl2:9711"]
 
 [apim.cors]
 allow_origins = "*"
