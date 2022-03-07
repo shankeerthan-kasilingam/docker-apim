@@ -71,7 +71,7 @@ services:
     healthcheck:
       test: ["CMD", "nc", "-z","localhost", "9443"]
       interval: 10s
-        tart_period: 180s
+      start_period: 180s
       retries: 20
     depends_on:
       mysql:
