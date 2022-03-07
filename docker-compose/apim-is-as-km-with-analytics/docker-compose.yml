@@ -18,6 +18,8 @@ services:
     image: mysql:5.7.34
     ports:
       - 3306
+    networks:
+      - nginx_network
     environment:
       MYSQL_ROOT_PASSWORD: root
     volumes:
@@ -36,6 +38,8 @@ services:
       start_period: 80s
   is-as-km:
     build: ./dockerfiles/is-as-km
+    networks:
+      - nginx_network
     healthcheck:
       test: ["CMD", "nc", "-z","localhost", "9443"]
       interval: 10s
@@ -50,6 +54,8 @@ services:
       - "9444:9443"
   is-as-km2:
     build: ./dockerfiles/is-as-km
+    networks:
+      - nginx_network
     healthcheck:
       test: ["CMD", "nc", "-z","localhost", "9443"]
       interval: 10s
@@ -64,6 +70,8 @@ services:
       - "9445:9443"
   api-manager:
     build: ./dockerfiles/apim
+    networks:
+      - nginx_network
     healthcheck:
       test: ["CMD", "nc", "-z","localhost", "9443"]
       interval: 10s
@@ -82,6 +90,8 @@ services:
       - "8243:8243"
   tm1:
     build: ./dockerfiles/tm
+    networks:
+      - nginx_network
     environment:
       PROFILE_NAME: traffic-manager
     healthcheck:
@@ -105,6 +115,8 @@ services:
       - "9721:9711"
   tm2:
     build: ./dockerfiles/tm
+    networks:
+      - nginx_network
     environment:
       PROFILE_NAME: traffic-manager
     healthcheck:
@@ -128,6 +140,8 @@ services:
       - "9722:9711"
   ngix-lb:
     build: ./dockerfiles/nginx
+    networks:
+      - nginx_network
     ports:
       - 80:80
       - 443:443
@@ -138,4 +152,6 @@ services:
         condition: service_healthy
       is-as-km2:
         condition: service_healthy
-    
+networks:
+   nginx_network:
+     driver: bridge
