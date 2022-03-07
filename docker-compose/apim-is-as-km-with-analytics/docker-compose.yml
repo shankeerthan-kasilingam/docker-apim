@@ -48,6 +48,20 @@ services:
       - ./conf/is-as-km:/home/wso2carbon/wso2-config-volume
     ports:
       - "9444:9443"
+  is-as-km2:
+    build: ./dockerfiles/is-as-km
+    healthcheck:
+      test: ["CMD", "nc", "-z","localhost", "9443"]
+      interval: 10s
+      start_period: 180s
+      retries: 20
+    depends_on:
+      mysql:
+        condition: service_healthy
+    volumes:
+      - ./conf/is-as-km:/home/wso2carbon/wso2-config-volume
+    ports:
+      - "9445:9443"
   api-manager:
     build: ./dockerfiles/apim
     healthcheck:
@@ -85,7 +99,30 @@ services:
     ports:
       - "9453:9443"
       - "8290:8280"
-      - "8254:8243"
+      - "8253:8243"
       - "5682:5672"
       - "9621:9611"
       - "9721:9711"
+  tm2:
+    build: ./dockerfiles/tm
+    environment:
+      PROFILE_NAME: traffic-manager
+    healthcheck:
+      test: ["CMD", "nc", "-z","localhost", "5672"]
+      interval: 10s
+      start_period: 180s
+      retries: 20
+    depends_on:
+      mysql:
+        condition: service_healthy
+      is-as-km:
+        condition: service_healthy
+    volumes:
+      - ./conf/tm:/home/wso2carbon/wso2-config-volume
+    ports:
+      - "9454:9443"
+      - "8291:8280"
+      - "8254:8243"
+      - "5683:5672"
+      - "9622:9611"
+      - "9722:9711"
