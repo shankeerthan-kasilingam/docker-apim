@@ -68,6 +68,8 @@ services:
       - "8243:8243"
   tm1:
     build: ./dockerfiles/tm
+    environment:
+      PROFILE_NAME: traffic-manager
     healthcheck:
       test: ["CMD", "nc", "-z","localhost", "5672"]
       interval: 10s
