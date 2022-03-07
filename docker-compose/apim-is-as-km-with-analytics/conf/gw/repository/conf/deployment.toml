@@ -34,8 +34,8 @@ password = "wso2carbon"
 # Key Manager configuration
 [apim.key_manager]
 service_url = "https://ngix-lb:3000/services/"
-username = "$ref{super_admin.username}"
-password = "$ref{super_admin.password}"
+username = "admin"
+password = "admin"
 
 # Traffic Manager configurations
 [apim.throttling]
