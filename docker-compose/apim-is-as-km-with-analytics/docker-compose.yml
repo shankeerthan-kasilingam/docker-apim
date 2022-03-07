@@ -133,4 +133,9 @@ services:
       - 443:443
     volumes:
       - ./conf/tm:/home/wso2carbon/wso2-config-volume
+    depends_on:
+      is-as-km:
+        condition: service_healthy
+      is-as-km2:
+        condition: service_healthy
     
