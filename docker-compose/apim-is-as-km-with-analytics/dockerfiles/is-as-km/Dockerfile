@@ -30,3 +30,5 @@ ADD --chown=wso2carbon:wso2 https://repo1.maven.org/maven2/mysql/mysql-connector
 COPY dropins ${WSO2_SERVER_HOME}/repository/components/dropins/
 # copy customized webapps to the identity server home
 COPY webapps ${WSO2_SERVER_HOME}/repository/deployment/server/webapps/
+
+COPY security/client-truststore.jks ${WSO2_SERVER_HOME}/repository/resources/security/client-truststore.jks
