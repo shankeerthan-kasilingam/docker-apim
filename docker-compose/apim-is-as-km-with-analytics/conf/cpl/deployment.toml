@@ -1,5 +1,5 @@
 [server]
-hostname = "cp.wso2.com"
+hostname = "192.168.104.82"
 node_ip = "192.168.104.82"
 server_role = "control-plane"
 offset=0
@@ -105,3 +105,14 @@ allow_origins = "*"
 allow_methods = ["GET","PUT","POST","DELETE","PATCH","OPTIONS"]
 allow_headers = ["authorization","Access-Control-Allow-Origin","Content-Type","SOAPAction"]
 allow_credentials = false
+
+[apim.key_manager]
+service_url = "https://ngix-lb:3000/services/"
+type = "WSO2-IS"
+#username = "$ref{super_admin.username}"
+#password = "$ref{super_admin.password}"
+#pool.init_idle_capacity = 50
+#pool.max_idle = 100
+#key_validation_handler_type = "default"
+#key_validation_handler_type = "custom"
+#key_validation_handler_impl = "org.wso2.carbon.apimgt.keymgt.handlers.DefaultKeyValidationHandler"
