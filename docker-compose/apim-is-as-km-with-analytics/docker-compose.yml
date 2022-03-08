@@ -176,7 +176,6 @@ services:
       - nginx_network
     environment:
       PROFILE_NAME: control-plane
-      config_volume: /home/wso2carbon/wso2-config-volume
     healthcheck:
       test: ["CMD", "nc", "-z","localhost", "9443"]
       interval: 10s
@@ -191,7 +190,6 @@ services:
         condition: service_healthy
     volumes:
       - ./conf/cpl/:/home/wso2carbon/wso2-config-volume
-      - ./conf/cpl/conf:/home/wso2carbon/wso2am-4.0.0/repository/conf
     ports:
       - "9443:9443"
       - "5672:5672"
@@ -203,7 +201,6 @@ services:
       - nginx_network
     environment:
       PROFILE_NAME: control-plane
-      config_volume: /home/wso2carbon/wso2-config-volume
     healthcheck:
       test: ["CMD", "nc", "-z","localhost", "9443"]
       interval: 10s
