@@ -1,0 +1,271 @@
+{
+    "Meta" : {
+      "Migration" : {
+        "3.0.0" : true
+      }
+    },
+    "NotificationsEnabled" : "false",
+    "RESTAPIScopes" : {
+      "Scope" : [ {
+        "Roles" : "admin,Internal/admin,Internal/publisher",
+        "Name" : "apim:api_publish"
+      }, {
+        "Roles" : "admin, Internal/admin,Internal/creator",
+        "Name" : "apim:api_create"
+      }, {
+        "Roles" : "admin, Internal/admin,Internal/creator,Internal/publisher",
+        "Name" : "apim:api_generate_key"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/publisher,Internal/creator,Internal/analytics",
+        "Name" : "apim:api_view"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/creator",
+        "Name" : "apim:api_delete"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/publisher,Internal/creator",
+        "Name" : "apim:tier_view"
+      }, {
+        "Roles" : "admin,Internal/admin",
+        "Name" : "apim:tier_manage"
+      }, {
+        "Roles" : "admin,Internal/admin",
+        "Name" : "apim:bl_view"
+      }, {
+        "Roles" : "admin,Internal/admin",
+        "Name" : "apim:bl_manage"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/creator,Internal/publisher",
+        "Name" : "apim:subscription_view"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/publisher",
+        "Name" : "apim:subscription_block"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/creator",
+        "Name" : "apim:mediation_policy_view"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/creator",
+        "Name" : "apim:mediation_policy_create"
+      }, {
+        "Roles" : "admin,Internal/admin",
+        "Name" : "apim:api_workflow_view"
+      }, {
+        "Roles" : "admin,Internal/admin",
+        "Name" : "apim:api_workflow_approve"
+      }, {
+        "Roles" : "admin,Internal/admin",
+        "Name" : "apim:admin"
+      }, {
+        "Roles" : "admin,Internal/admin",
+        "Name" : "apim:app_owner_change"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/devops",
+        "Name" : "apim:app_import_export"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/devops",
+        "Name" : "apim:api_import_export"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/devops",
+        "Name" : "apim:api_product_import_export"
+      }, {
+        "Roles" : "admin,Internal/admin",
+        "Name" : "apim:label_manage"
+      }, {
+        "Roles" : "admin,Internal/admin",
+        "Name" : "apim:label_read"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/subscriber",
+        "Name" : "apim:app_update"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/subscriber,Internal/devops",
+        "Name" : "apim:app_manage"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/subscriber,Internal/devops",
+        "Name" : "apim:sub_manage"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/publisher",
+        "Name" : "apim:monetization_usage_publish"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/creator,Internal/publisher",
+        "Name" : "apim:document_create"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/creator",
+        "Name" : "apim:ep_certificates_update"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/creator",
+        "Name" : "apim:client_certificates_update"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/creator",
+        "Name" : "apim:threat_protection_policy_manage"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/creator,Internal/publisher",
+        "Name" : "apim:document_manage"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/creator",
+        "Name" : "apim:client_certificates_add"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/creator,Internal/publisher",
+        "Name" : "apim:publisher_settings"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/subscriber",
+        "Name" : "apim:store_settings"
+      }, {
+        "Roles" : "admin,Internal/admin",
+        "Name" : "apim:admin_settings"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/creator",
+        "Name" : "apim:client_certificates_view"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/creator",
+        "Name" : "apim:mediation_policy_manage"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/creator",
+        "Name" : "apim:threat_protection_policy_create"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/creator",
+        "Name" : "apim:ep_certificates_add"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/creator",
+        "Name" : "apim:ep_certificates_view"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/subscriber",
+        "Name" : "apim:api_key"
+      }, {
+        "Roles" : "admin,Internal/admin",
+        "Name" : "apim_analytics:admin"
+      }, {
+        "Roles" : "admin,Internal/admin",
+        "Name" : "apim_analytics:monitoring_dashboard:own"
+      }, {
+        "Roles" : "admin,Internal/admin",
+        "Name" : "apim_analytics:monitoring_dashboard:edit"
+      }, {
+        "Roles" : "admin,Internal/analytics,Internal/admin",
+        "Name" : "apim_analytics:monitoring_dashboard:view"
+      }, {
+        "Roles" : "admin,Internal/admin",
+        "Name" : "apim_analytics:business_analytics:own"
+      }, {
+        "Roles" : "admin,Internal/admin",
+        "Name" : "apim_analytics:business_analytics:edit"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/analytics",
+        "Name" : "apim_analytics:business_analytics:view"
+      }, {
+        "Roles" : "admin,Internal/admin",
+        "Name" : "apim_analytics:api_analytics:own"
+      }, {
+        "Roles" : "admin,Internal/admin",
+        "Name" : "apim_analytics:api_analytics:edit"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/creator,Internal/publisher",
+        "Name" : "apim_analytics:api_analytics:view"
+      }, {
+        "Roles" : "admin,Internal/admin",
+        "Name" : "apim_analytics:application_analytics:own"
+      }, {
+        "Roles" : "admin,Internal/admin",
+        "Name" : "apim_analytics:application_analytics:edit"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/subscriber",
+        "Name" : "apim_analytics:application_analytics:view"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/creator",
+        "Name" : "apim:pub_alert_manage"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/subscriber",
+        "Name" : "apim:sub_alert_manage"
+      }, {
+        "Roles" : "admin,Internal/admin",
+        "Name" : "apim:tenantInfo"
+      }, {
+        "Roles" : "admin,Internal/admin",
+        "Name" : "apim:tenant_theme_manage"
+      }, {
+        "Roles" : "admin,Internal/admin",
+        "Name" : "apim:admin_operations"
+      }, {
+        "Roles" : "admin,Internal/admin",
+        "Name" : "apim:shared_scope_manage"
+      }, {
+        "Roles" : "admin,Internal/admin",
+        "Name" : "apim:admin_alert_manage"
+      }, {
+        "Roles" : "admin,Internal/admin",
+        "Name" : "apim:bot_data"
+      }, {
+        "Roles" : "admin,Internal/admin",
+        "Name" : "apim:scope_manage"
+      }, {
+        "Roles" : "admin,Internal/admin",
+        "Name" : "apim:role_manage"
+      }, {
+        "Roles" : "admin,Internal/admin",
+        "Name" : "apim:environment_manage"
+      }, {
+        "Roles" : "admin,Internal/admin",
+        "Name" : "apim:environment_read"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/creator,Internal/publisher",
+        "Name" : "service_catalog:service_view"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/creator",
+        "Name" : "service_catalog:service_write"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/creator,Internal/publisher",
+        "Name" : "apim:comment_view"
+      }, {
+        "Roles" : "admin,Internal/admin,Internal/creator,Internal/publisher",
+        "Name" : "apim:comment_write"
+      }, {
+        "Roles" : "admin,Internal/subscriber,Internal/devops,Internal/admin",
+        "Name" : "apim:subscribe"
+      } ]
+    },
+    "EnableMonetization" : false,
+    "ExtensionHandlerPosition" : "bottom",
+    "DefaultRoles" : {
+      "PublisherRole" : {
+        "RoleName" : "Internal/publisher",
+        "CreateOnTenantLoad" : true
+      },
+      "DevOpsRole" : {
+        "RoleName" : "Internal/devops",
+        "CreateOnTenantLoad" : true
+      },
+      "SubscriberRole" : {
+        "CreateOnTenantLoad" : true
+      },
+      "CreatorRole" : {
+        "RoleName" : "Internal/creator",
+        "CreateOnTenantLoad" : true
+      }
+    },
+    "EnableRecommendation" : false,
+    "IsUnlimitedTierPaid" : false,
+    "ContainerMgt" : [ {
+      "Type" : "Kubernetes",
+      "ContainerMgtInfo" : [ {
+        "DisplayName" : "",
+        "ClusterName" : "",
+        "Properties" : {
+          "JWTSecurityCustomResourceName" : "",
+          "OauthSecurityCustomResourceName" : "",
+          "MasterURL" : "",
+          "BasicSecurityCustomResourceName" : "",
+          "AccessURL" : "",
+          "Replicas" : 1,
+          "Namespace" : "default",
+          "SAToken" : ""
+        }
+      } ]
+    } ],
+    "Notifications" : [ {
+      "Type" : "new_api_version",
+      "Notifiers" : [ {
+        "Title" : "Version $2 of $1 Released",
+        "Class" : "org.wso2.carbon.apimgt.impl.notification.NewAPIVersionEmailNotifier",
+        "ClaimsRetrieverImplClass" : "org.wso2.carbon.apimgt.impl.token.DefaultClaimsRetriever",
+        "Template" : " <html> <body> <h3 style=\"color:Black;\">We’re happy to announce the arrival of the next major version $2 of $1 API which is now available in Our API Store.</h3><a href=\"https://localhost:9443/store\">Click here to Visit WSO2 API Store</a></body></html>"
+      } ]
+    } ]
+  }
