@@ -1,5 +1,5 @@
 [server]
-hostname = "ngix-lb"
+hostname = "192.168.104.82"
 mgt_console_hostname = "192.168.104.82"
 #node_ip = "192.168.104.82"
 server_role = "control-plane"
