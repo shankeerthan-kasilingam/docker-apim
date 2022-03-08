@@ -108,7 +108,7 @@ allow_headers = ["authorization","Access-Control-Allow-Origin","Content-Type","S
 allow_credentials = false
 
 [apim.key_manager]
-service_url = "https://ngix-lb:3000/services/"
+service_url = "https://192.168.104.82:9483/services/"
 type = "WSO2-IS"
 #username = "$ref{super_admin.username}"
 #password = "$ref{super_admin.password}"

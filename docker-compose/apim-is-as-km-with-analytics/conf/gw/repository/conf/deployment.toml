@@ -33,7 +33,7 @@ password = "wso2carbon"
 
 # Key Manager configuration
 [apim.key_manager]
-service_url = "https://192.168.104.82:3000/services/"
+service_url = "https://192.168.104.82:9483/services/"
 username = "admin"
 password = "admin"
 type = "WSO2-IS"

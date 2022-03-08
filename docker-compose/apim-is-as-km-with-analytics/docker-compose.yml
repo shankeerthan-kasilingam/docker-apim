@@ -51,7 +51,7 @@ services:
     volumes:
       - ./conf/is-as-km:/home/wso2carbon/wso2-config-volume
     ports:
-      - "9458:9443"
+      - "9458:9483"
   is-as-km2:
     build: ./dockerfiles/is-as-km
     networks:
@@ -67,7 +67,7 @@ services:
     volumes:
       - ./conf/is-as-km:/home/wso2carbon/wso2-config-volume
     ports:
-      - "9459:9443"
+      - "9459:9483"
   tm1:
     build: ./dockerfiles/tm
     networks:
@@ -227,7 +227,7 @@ services:
     ports:
       - 8280:8280
       - 443:443
-      - 3000:3000
+      - 9483:9483
       - 4000:4000
       - 8243:8243
     volumes:
