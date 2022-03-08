@@ -41,9 +41,9 @@ services:
     networks:
       - nginx_network
     healthcheck:
-      test: ["CMD", "nc", "-z","localhost", "9443"]
+      test: ["CMD", "nc", "-z","localhost", "9483"]
       interval: 10s
-      start_period: 380s
+      start_period: 180s
       retries: 20
     depends_on:
       mysql:
@@ -57,9 +57,9 @@ services:
     networks:
       - nginx_network
     healthcheck:
-      test: ["CMD", "nc", "-z","localhost", "9443"]
+      test: ["CMD", "nc", "-z","localhost", "9483"]
       interval: 10s
-      start_period: 380s
+      start_period: 180s
       retries: 20
     depends_on:
       mysql:
