@@ -190,7 +190,8 @@ services:
       is-as-km2:
         condition: service_healthy
     volumes:
-      - ./conf/cpl:/home/wso2carbon/wso2-config-volume
+      - ./conf/cpl/:/home/wso2carbon/wso2-config-volume
+      - ./conf/cpl/conf:/home/wso2carbon/wso2am-4.0.0/repository/conf
     ports:
       - "9443:9443"
       - "5672:5672"
