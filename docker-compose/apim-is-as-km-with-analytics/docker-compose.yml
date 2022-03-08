@@ -176,6 +176,7 @@ services:
       - nginx_network
     environment:
       PROFILE_NAME: control-plane
+      config_volume: /home/wso2carbon/wso2-config-volume
     healthcheck:
       test: ["CMD", "nc", "-z","localhost", "9443"]
       interval: 10s
@@ -201,6 +202,7 @@ services:
       - nginx_network
     environment:
       PROFILE_NAME: control-plane
+      config_volume: /home/wso2carbon/wso2-config-volume
     healthcheck:
       test: ["CMD", "nc", "-z","localhost", "9443"]
       interval: 10s
