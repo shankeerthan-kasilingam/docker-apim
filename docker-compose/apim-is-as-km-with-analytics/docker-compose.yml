@@ -231,7 +231,7 @@ services:
   ngix-lb:
     build: ./dockerfiles/nginx
     healthcheck:
-      test: ["CMD", "curl -so /dev/null http://localhost/ || exit 1"]
+      test: ["CMD", "nc", "-z","localhost", "443"]
       interval: 10s
       start_period: 180s
       retries: 20
