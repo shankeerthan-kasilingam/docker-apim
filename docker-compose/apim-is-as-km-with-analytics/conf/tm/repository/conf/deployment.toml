@@ -62,3 +62,13 @@ event_listening_endpoints = ["tcp://192.168.104.82:5682", "tcp://192.168.104.82:
 urls = ["tcp://192.168.104.82:9621", "tcp://192.168.104.82:9622"]
 auth_urls = ["ssl://192.168.104.82:9721", "ssl://192.168.104.82:9722"]
 
+[apim.key_manager]
+service_url = "https://192.168.104.82:9483/services/"
+type = "WSO2-IS"
+#username = "$ref{super_admin.username}"
+#password = "$ref{super_admin.password}"
+#pool.init_idle_capacity = 50
+#pool.max_idle = 100
+#key_validation_handler_type = "default"
+#key_validation_handler_type = "custom"
+#key_validation_handler_impl = "org.wso2.carbon.apimgt.keymgt.handlers.DefaultKeyValidationHandler"
