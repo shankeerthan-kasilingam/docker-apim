@@ -57,7 +57,7 @@ order = 1
 # todo : change to CPL 
 # https://apim.docs.wso2.com/en/latest/install-and-setup/setup/distributed-deployment/deploying-wso2-api-m-in-a-distributed-setup-with-tm-separated/
 [event_listener.properties]
-notification_endpoint = "https://ngix-lb:443/internal/data/v1/notify"
+notification_endpoint = "https://192.168.104.82:5000/internal/data/v1/notify"
 username = "${admin.username}"
 password = "${admin.password}"
 'header.X-WSO2-KEY-MANAGER' = "default"

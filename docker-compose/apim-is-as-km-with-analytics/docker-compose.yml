@@ -247,6 +247,7 @@ services:
       - 9483:9483
       - 4000:4000
       - 8243:8243
+      - 5000:5000
     volumes:
       - ./conf/tm:/home/wso2carbon/wso2-config-volume
     depends_on:
