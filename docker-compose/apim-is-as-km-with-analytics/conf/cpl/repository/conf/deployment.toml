@@ -69,7 +69,7 @@ https_endpoint = "https://gw2:8243"
 username= "$ref{super_admin.username}"
 password= "$ref{super_admin.password}"
 enable_data_publishing = false
-service_url = "https://ngix-lb:4000/services/"
+service_url = "https://192.168.104.82:4000/services/"
 throttle_decision_endpoints = ["tcp://tm1:5672", "tcp://tm2:5672"]
 
 ## not necessary as per APIMINTERNAL-1696
@@ -85,7 +85,7 @@ name = "org.wso2.is.notification.ApimOauthEventInterceptor"
 order = 1
 
 [event_listener.properties]
-notification_endpoint = "https://ngix-lb:443/internal/data/v1/notify"
+notification_endpoint = "https://192.168.104.82:443/internal/data/v1/notify"
 username = "${admin.username}"
 password = "${admin.password}"
 'header.X-WSO2-KEY-MANAGER' = "default"
@@ -95,7 +95,7 @@ password = "${admin.password}"
 enable = true
 username = "$ref{super_admin.username}"
 password = "$ref{super_admin.password}"
-service_url = "https://ngix-lb:4000/services/"
+service_url = "https://192.168.104.82:4000/services/"
 event_listening_endpoints = ["tcp://192.168.104.82:5682", "tcp://192.168.104.82:5683"]
 
 [[apim.event_hub.publish.url_group]]
