@@ -230,6 +230,11 @@ services:
       - "9712:9711"
   ngix-lb:
     build: ./dockerfiles/nginx
+    healthcheck:
+      test: ["CMD", "curl -so /dev/null http://localhost/ || exit 1"]
+      interval: 10s
+      start_period: 180s
+      retries: 20
     networks:
       - nginx_network
     ports:
