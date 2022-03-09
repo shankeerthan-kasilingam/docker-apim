@@ -118,3 +118,7 @@ type = "WSO2-IS"
 #key_validation_handler_type = "default"
 #key_validation_handler_type = "custom"
 #key_validation_handler_impl = "org.wso2.carbon.apimgt.keymgt.handlers.DefaultKeyValidationHandler"
+
+
+[apim.devportal]
+url = "https://192.168.104.82:443/devportal"
