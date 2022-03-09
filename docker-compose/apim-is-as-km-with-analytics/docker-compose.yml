@@ -250,8 +250,10 @@ services:
     volumes:
       - ./conf/tm:/home/wso2carbon/wso2-config-volume
     depends_on:
-      - cpl1
-      - cpl2
+      cpl1:
+        condition: service_started
+      cpl2:
+        condition: service_started
       is-as-km1:
         condition: service_healthy
       is-as-km2:
