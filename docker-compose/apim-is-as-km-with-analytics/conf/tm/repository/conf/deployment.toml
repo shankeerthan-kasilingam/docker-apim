@@ -38,14 +38,27 @@ file_name = "client-truststore.jks"
 type = "JKS"
 password = "wso2carbon"
 
-# Event Hub configurations
+# old Event Hub configurations, it's not working 
+#[apim.event_hub]
+#enable = true
+#username = "$ref{super_admin.username}"
+#password = "$ref{super_admin.password}"
+#service_url = "https://ngix-lb:443/services/"
+#event_listening_endpoints = ["tcp://cpl1:5672", "tcp://cpl2:5672"]
+
+#[[apim.event_hub.publish.url_group]]
+#urls = ["tcp://cpl1:9611", "tcp://cpl2:9611"]
+#auth_urls = ["ssl://cpl1:9711", "ssl://cpl2:9711"]
+
+# Event Hub configurations added as per APIMINTERNAL-1696
 [apim.event_hub]
 enable = true
 username = "$ref{super_admin.username}"
 password = "$ref{super_admin.password}"
-service_url = "https://ngix-lb:443/services/"
-event_listening_endpoints = ["tcp://cpl1:5672", "tcp://cpl2:5672"]
+service_url = "https://ngix-lb:4000/services/"
+event_listening_endpoints = ["tcp://192.168.104.82:5682", "tcp://192.168.104.82:5683"]
 
 [[apim.event_hub.publish.url_group]]
-urls = ["tcp://cpl1:9611", "tcp://cpl2:9611"]
-auth_urls = ["ssl://cpl1:9711", "ssl://cpl2:9711"]
+urls = ["tcp://192.168.104.82:9621", "tcp://192.168.104.82:9622"]
+auth_urls = ["ssl://192.168.104.82:9721", "ssl://192.168.104.82:9722"]
+
