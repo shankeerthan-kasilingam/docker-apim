@@ -240,6 +240,7 @@ services:
     build: ./dockerfiles/nginx
     networks:
       - nginx_network
+      - host
     ports:
       - 8280:8280
       - 443:443
