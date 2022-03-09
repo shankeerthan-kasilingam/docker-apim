@@ -95,11 +95,11 @@ enable = true
 username = "$ref{super_admin.username}"
 password = "$ref{super_admin.password}"
 service_url = "https://ngix-lb:443/services/"
-event_listening_endpoints = ["tcp://cpl1:5672", "tcp://cpl2:5672"]
+event_listening_endpoints = ["tcp://192.168.104.82:5672", "tcp://192.168.104.82:5673"]
 
 [[apim.event_hub.publish.url_group]]
-urls = ["tcp://cpl1:9611", "tcp://cpl2:9611"]
-auth_urls = ["ssl://cpl1:9711", "ssl://cpl2:9711"]
+urls = ["tcp://192.168.104.82:9611", "tcp://192.168.104.82:9612"]
+auth_urls = ["ssl://192.168.104.82:9711", "ssl://192.168.104.82:9712"]
 
 [apim.cors]
 allow_origins = "*"
