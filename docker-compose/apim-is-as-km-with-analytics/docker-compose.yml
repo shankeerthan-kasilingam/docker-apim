@@ -64,6 +64,8 @@ services:
     depends_on:
       mysql:
         condition: service_healthy
+      is-as-km1:
+        condition: service_healthy
     volumes:
       - ./conf/is-as-km2:/home/wso2carbon/wso2-config-volume
     ports:
