@@ -49,7 +49,7 @@ services:
       mysql:
         condition: service_healthy
     volumes:
-      - ./conf/is-as-km:/home/wso2carbon/wso2-config-volume
+      - ./conf/is-as-km1:/home/wso2carbon/wso2-config-volume
     ports:
       - "9458:9483"
   is-as-km2:
@@ -65,7 +65,7 @@ services:
       mysql:
         condition: service_healthy
     volumes:
-      - ./conf/is-as-km:/home/wso2carbon/wso2-config-volume
+      - ./conf/is-as-km2:/home/wso2carbon/wso2-config-volume
     ports:
       - "9459:9483"
   tm1:
