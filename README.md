@@ -68,5 +68,5 @@ Notes
 * Self signed certifcates are used for all nodes. After configuring current setup successfully, you may change the certificates and keys.
 * The both Gateways are configured to deploy all the API artificats. This can be changed. The endpoints https://{your-ip}:8283 and https://{your-ip}:8280 are load balanced. So Nginx will distribute the requests.
 * For the Portals (Publisher portal, Admin Portal, Developer portal, and Management console), loadbalancing is configured based on IP_HASH of Nginx.
-* For Gatways, and throttling the information has to be published to both Traffic managers. So Active-Passive or Failover TCP loadbalancing might not work.
+* For Gatways, and throttling the information has to be published to both Traffic managers. So Active-Passive or Failover TCP/SSL loadbalancing might not work.
 * Only HTTP/S endpoints are configured for loadbalacing.
