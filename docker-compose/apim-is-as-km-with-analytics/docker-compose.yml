@@ -88,10 +88,6 @@ services:
         condition: service_healthy
       is-as-km2:
         condition: service_healthy
-      cpl1:
-        condition: service_healthy
-      cpl2:
-        condition: service_healthy
     volumes:
       - ./conf/tm1:/home/wso2carbon/wso2-config-volume
     ports:
@@ -116,10 +112,6 @@ services:
       is-as-km1:
         condition: service_healthy
       is-as-km2:
-        condition: service_healthy
-      cpl1:
-        condition: service_healthy
-      cpl2:
         condition: service_healthy
     volumes:
       - ./conf/tm2:/home/wso2carbon/wso2-config-volume
@@ -205,6 +197,10 @@ services:
       is-as-km1:
         condition: service_healthy
       is-as-km2:
+        condition: service_healthy
+      tm1:
+        condition: service_healthy
+      tm2:
         condition: service_healthy
     volumes:
       - ./conf/cpl/:/home/wso2carbon/wso2-config-volume
