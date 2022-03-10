@@ -122,3 +122,8 @@ type = "WSO2-IS"
 
 [apim.devportal]
 url = "https://192.168.104.82:443/devportal"
+
+
+# https://apim.docs.wso2.com/en/latest/install-and-setup/setup/setting-up-proxy-server-and-the-load-balancer/configuring-the-proxy-server-and-the-load-balancer/#step-3-configure-the-load-balancerreverse-proxy-settings-in-the-product
+[transport.https.properties]
+proxyPort = 443
