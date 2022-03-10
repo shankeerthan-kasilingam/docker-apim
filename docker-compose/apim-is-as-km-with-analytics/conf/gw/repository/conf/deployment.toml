@@ -85,3 +85,9 @@ allow_credentials = false
 
 [apim.sync_runtime_artifacts.gateway]
 gateway_labels =["GW1" , "GW2"]
+
+
+[apim.analytics]
+enable = true
+config_endpoint = "https://analytics-event-auth.choreo.dev/auth/v1"
+auth_token = "1943b090-fe0a-4053-8ccc-16580ffdaa5d"
