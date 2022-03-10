@@ -1,7 +1,7 @@
 [server]
 hostname = "192.168.104.82"
 node_ip = "127.0.0.1"
-# 9483
+# 9483 offset is necessary; 
 offset = 40
 base_path = "https://$ref{server.hostname}:${carbon.management.port}"
 

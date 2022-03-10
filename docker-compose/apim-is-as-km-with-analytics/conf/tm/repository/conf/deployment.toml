@@ -38,19 +38,13 @@ file_name = "client-truststore.jks"
 type = "JKS"
 password = "wso2carbon"
 
-# old Event Hub configurations, it's not working 
-#[apim.event_hub]
-#enable = true
-#username = "$ref{super_admin.username}"
-#password = "$ref{super_admin.password}"
-#service_url = "https://192.168.104.82:5000/services/"
-#event_listening_endpoints = ["tcp://cpl1:5672", "tcp://cpl2:5672"]
+
 
 #[[apim.event_hub.publish.url_group]]
 #urls = ["tcp://cpl1:9611", "tcp://cpl2:9611"]
 #auth_urls = ["ssl://cpl1:9711", "ssl://cpl2:9711"]
 
-# Event Hub configurations added as per APIMINTERNAL-1696
+# Event Hub configurations added 
 [apim.event_hub]
 enable = true
 username = "$ref{super_admin.username}"
@@ -74,7 +68,7 @@ type = "WSO2-IS"
 #key_validation_handler_impl = "org.wso2.carbon.apimgt.keymgt.handlers.DefaultKeyValidationHandler"
 
 
-# adding GW environments to resolve below errors 
+# adding GW environments (if they are not added here, tm will throw errors)
 # tm2_1        | [2022-03-09 04:40:27,690] ERROR - GlobalThrowableMapper Configured read only environment not found: GW2
 # Gateway configuration
 [[apim.gateway.environment]]
