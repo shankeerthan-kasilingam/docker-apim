@@ -70,8 +70,12 @@ service_url = "https://192.168.104.82:5000/services/"
 event_listening_endpoints = ["tcp://192.168.104.82:5672", "tcp://192.168.104.82:5673"]
 
 [[apim.event_hub.publish.url_group]]
-urls = ["tcp://192.168.104.82:9611", "tcp://192.168.104.82:9612"]
-auth_urls = ["ssl://192.168.104.82:9711", "ssl://192.168.104.82:9712"]
+urls = ["tcp://192.168.104.82:9611"]
+auth_urls = ["ssl://192.168.104.82:9711"]
+
+[[apim.event_hub.publish.url_group]]
+urls = ["tcp://192.168.104.82:9612"]
+auth_urls = ["ssl://192.168.104.82:9712"]
 
 [apim.key_manager]
 service_url = "https://192.168.104.82:9483/services/"
