@@ -44,10 +44,10 @@ show_as_token_endpoint_url = true
 service_url = "https://gw1:9443/services/"
 username= "${admin.username}"
 password= "${admin.password}"
-ws_endpoint = "ws://gw1:9099"
-wss_endpoint = "wss://gw1:8099"
-http_endpoint = "http://gw1:8280"
-https_endpoint = "https://gw1:8243"
+ws_endpoint = "ws://192.168.104.82:9104"
+wss_endpoint = "wss://192.168.104.82:8104"
+http_endpoint = "http://192.168.104.82:8280"
+https_endpoint = "https://192.168.104.82:8243"
 
 [[apim.gateway.environment]]
 name = "GW2"
@@ -58,10 +58,10 @@ show_as_token_endpoint_url = true
 service_url = "https://gw2:9443/services/"
 username= "${admin.username}"
 password= "${admin.password}"
-ws_endpoint = "ws://gw2:9099"
-wss_endpoint = "wss://gw2:8099"
-http_endpoint = "http://gw2:8280"
-https_endpoint = "https://gw2:8243"
+ws_endpoint = "ws://192.168.104.82:9105"
+wss_endpoint = "wss://192.168.104.82:8105"
+http_endpoint = "http://192.168.104.82:8280"
+https_endpoint = "https://192.168.104.82:8243"
 
 
 # Traffic Manager configurations
