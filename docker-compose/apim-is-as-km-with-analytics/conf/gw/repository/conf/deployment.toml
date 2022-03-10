@@ -40,12 +40,23 @@ type = "WSO2-IS"
 
 # Traffic Manager configurations
 [apim.throttling]
+username= "$ref{super_admin.username}"
+password= "$ref{super_admin.password}"
+enable_data_publishing = true
+enable_policy_deploy = true
+enable_blacklist_condition = true
+enable_persistence = true
 service_url = "https://192.168.104.82:4000/services/"
-throttle_decision_endpoints = ["tcp://192.168.104.82:5682", "tcp://192.168.104.82:5683"]
+throttle_decision_endpoints = ["tcp://tm1:5672", "tcp://tm2:5672"]
+
 
 [[apim.throttling.url_group]]
-traffic_manager_urls=["tcp://192.168.104.82:9621", "tcp://192.168.104.82:9622"]
-traffic_manager_auth_urls=["ssl://192.168.104.82:9721", "ssl://192.168.104.82:9722"]
+traffic_manager_urls=["tcp://tm1:9611"]
+traffic_manager_auth_urls=["ssl://tm1:9711"]
+
+[[apim.throttling.url_group]]
+traffic_manager_urls=["tcp://tm2:9611"]
+traffic_manager_auth_urls=["ssl://tm2:9711"]
 
 # Event Listener configurations
 [[event_listener]]
@@ -68,12 +79,12 @@ password = "${admin.password}"
 enable = true
 username = "$ref{super_admin.username}"
 password = "$ref{super_admin.password}"
-service_url = "https://192.168.104.82:4000/services/"
-event_listening_endpoints = ["tcp://192.168.104.82:5682", "tcp://192.168.104.82:5683"]
+service_url = "https://192.168.104.82:5000/services/"
+event_listening_endpoints = ["tcp://192.168.104.82:5672", "tcp://192.168.104.82:5673"]
 
 [[apim.event_hub.publish.url_group]]
-urls = ["tcp://192.168.104.82:9621", "tcp://192.168.104.82:9622"]
-auth_urls = ["ssl://192.168.104.82:9721", "ssl://192.168.104.82:9722"]
+urls = ["tcp://192.168.104.82:9611", "tcp://192.168.104.82:9612"]
+auth_urls = ["ssl://192.168.104.82:9711", "ssl://192.168.104.82:9712"]
 
 [apim.cors]
 allow_origins = "*"

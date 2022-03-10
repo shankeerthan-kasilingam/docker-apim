@@ -87,7 +87,7 @@ services:
       is-as-km2:
         condition: service_healthy
     volumes:
-      - ./conf/tm:/home/wso2carbon/wso2-config-volume
+      - ./conf/tm1:/home/wso2carbon/wso2-config-volume
     ports:
       - "9453:9443"
       - "5682:5672"
@@ -112,7 +112,7 @@ services:
       is-as-km2:
         condition: service_healthy
     volumes:
-      - ./conf/tm:/home/wso2carbon/wso2-config-volume
+      - ./conf/tm2:/home/wso2carbon/wso2-config-volume
     ports:
       - "9454:9443"
       - "5683:5672"
