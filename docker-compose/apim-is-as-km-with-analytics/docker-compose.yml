@@ -142,6 +142,10 @@ services:
         condition: service_healthy
       tm2:
         condition: service_healthy
+      cpl1:
+        condition: service_started
+      cpl2:
+        condition: service_started
     volumes:
       - ./conf/gw:/home/wso2carbon/wso2-config-volume
     ports:
@@ -172,6 +176,10 @@ services:
         condition: service_healthy
       tm2:
         condition: service_healthy
+      cpl1:
+        condition: service_started
+      cpl2:
+        condition: service_started
     volumes:
       - ./conf/gw:/home/wso2carbon/wso2-config-volume
     ports:
