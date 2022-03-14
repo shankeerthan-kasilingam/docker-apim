@@ -46,8 +46,8 @@ username= "${admin.username}"
 password= "${admin.password}"
 ws_endpoint = "ws://192.168.104.82:9104"
 wss_endpoint = "wss://192.168.104.82:8104"
-http_endpoint = "http://192.168.104.82:8280"
-https_endpoint = "https://192.168.104.82:8243"
+http_endpoint = "http://192.168.104.82:8285"
+https_endpoint = "https://192.168.104.82:8248"
 
 
 
