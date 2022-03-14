@@ -65,21 +65,21 @@ https_endpoint = "https://192.168.104.82:8243"
 
 
 # Traffic Manager configurations
-[apim.throttling]
-username= "$ref{super_admin.username}"
-password= "$ref{super_admin.password}"
-enable_data_publishing = false
-service_url = "https://192.168.104.82:4000/services/"
-throttle_decision_endpoints = ["tcp://tm1:5672", "tcp://tm2:5672"]
+#[apim.throttling]
+#username= "$ref{super_admin.username}"
+#password= "$ref{super_admin.password}"
+#enable_data_publishing = false
+#service_url = "https://192.168.104.82:4000/services/"
+#throttle_decision_endpoints = ["tcp://tm1:5672", "tcp://tm2:5672"]
 
 
-[[apim.throttling.url_group]]
-traffic_manager_urls=["tcp://192.168.104.82:9621"]
-traffic_manager_auth_urls=["ssl://192.168.104.82:9721"]
+#[[apim.throttling.url_group]]
+#traffic_manager_urls=["tcp://192.168.104.82:9621"]
+#traffic_manager_auth_urls=["ssl://192.168.104.82:9721"]
 
-[[apim.throttling.url_group]]
-traffic_manager_urls=["tcp://192.168.104.82:9622"]
-traffic_manager_auth_urls=["ssl://192.168.104.82:9722"]
+#[[apim.throttling.url_group]]
+#traffic_manager_urls=["tcp://192.168.104.82:9622"]
+#traffic_manager_auth_urls=["ssl://192.168.104.82:9722"]
 
 
 # Event Listener configurations
@@ -90,7 +90,7 @@ name = "org.wso2.is.notification.ApimOauthEventInterceptor"
 order = 1
 
 [event_listener.properties]
-notification_endpoint = "https://192.168.104.82:4000/internal/data/v1/notify"
+notification_endpoint = "https://192.168.104.82:5000/internal/data/v1/notify"
 username = "${admin.username}"
 password = "${admin.password}"
 'header.X-WSO2-KEY-MANAGER' = "default"
@@ -100,16 +100,16 @@ password = "${admin.password}"
 enable = true
 username = "$ref{super_admin.username}"
 password = "$ref{super_admin.password}"
-service_url = "https://192.168.104.82:4000/services/"
-event_listening_endpoints = ["tcp://192.168.104.82:5682", "tcp://192.168.104.82:5683"]
+service_url = "https://192.168.104.82:5000/services/"
+event_listening_endpoints = ["tcp://192.168.104.82:5672", "tcp://192.168.104.82:5673"]
 
 [[apim.event_hub.publish.url_group]]
-urls = ["tcp://192.168.104.82:9621"]
-auth_urls = ["ssl://192.168.104.82:9721"]
+urls = ["tcp://192.168.104.82:9611"]
+auth_urls = ["ssl://192.168.104.82:9711"]
 
 [[apim.event_hub.publish.url_group]]
-urls = ["tcp://192.168.104.82:9622"]
-auth_urls = ["ssl://192.168.104.82:9722"]
+urls = ["tcp://192.168.104.82:9612"]
+auth_urls = ["ssl://192.168.104.82:9712"]
 
 [apim.cors]
 allow_origins = "*"
